@@ -113,7 +113,8 @@ std::string Chat::input_user_data() // ввод данных
 bool Chat::checkUser(std::string user_login)
 {
     std::string head = "check"; // для идентификации пакета
-    std::string body = head + m_delim + user_login;
+    std::string body;
+    body.append(head.append(m_delim.append(user_login)));//trash (:
 
     m_iclient.send_data_to_serv(body); // отправка запроса на проверку пользователя
     std::string rec_serv = m_iclient.recip_mes_from_serv();

@@ -5,7 +5,7 @@ project(Chat-client LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(Chat-client main.cpp
+ add_executable(Chat-client main.cpp
     User.cpp
     User.h
     Message.cpp
